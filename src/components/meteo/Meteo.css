@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+#Meteo {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    width: 412px;
+    margin: 0 auto;
+}
+
+#Meteo h1 {
+    color: #FFF;
+    font-weight: bold; 
+    font-size: 40px;
+    line-height: 48px;
+    padding-top: 80px;
+    margin: 0;
+    text-align: center;
+}
+
+#Meteo h1 + p {
+    color: #5887FF;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0;
+    padding-top: 8px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#Meteo header {
+    display: flex;
+    color: #323232;
+    justify-content: space-between;
+    padding-top: 56px;
+}
+
+/* ----------------------------- */
+/* -----------SLIDER------------ */
+/* ----------------------------- */
+
+#Meteo .slider > div,
+#Meteo li {
+    background: rgba(255,255,255, 0.4);
+    backdrop-filter: blur(18px);
+    border-radius: 20px;
+}
+
+
+#Meteo .slider {
+    margin-bottom: 22px;
+}
+
+#Meteo .slider input[type="range"] {
+    -webkit-appearance: none;
+    background: transparent;
+    cursor: pointer;
+
+    height: 30px;
+    margin: 0;
+    padding: 0 20px;
+}
+
+#Meteo .slider input[type=range]:focus {
+    outline: none;
+}
+
+#Meteo .slider input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 25px;
+    background: #5887FF;
+    cursor: pointer;
+    margin-top: -6px;
+}
+
+#Meteo .slider input[type=range]::-webkit-slider-runnable-track {
+   width: 100%;
+   background: white;
+   height: 2px;
+   cursor: pointer;
+}
+
+#Meteo .slider p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 8px 0;
+}
+
+#Meteo .slider .title {
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: white;
+}
+
+#Meteo .slider .value {
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #5887FF;
+    font-weight: bold;
+}
+
+/* ----------------------------- */
+/* ------METEODAY ELEMENTS------ */
+/* ----------------------------- */
+
+#Meteo li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 20px;
+
+    animation: meteoDayShow 400ms;
+    animation-iteration-count: 1
+}
+
+@keyframes meteoDayShow {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+#Meteo li .overview{
+    display: flex;
+}
+
+#Meteo li p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+#Meteo li p:not(:last-child){
+    margin: 0 auto 8px;
+}
+
+#Meteo li .meteoParameter{
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+
+    margin-right: 25px;
+}
+
+#Meteo li .meteoValue{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #5887FF;
+}
+
+#Meteo h2 {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+#Meteo img {max-width: 60px;}
