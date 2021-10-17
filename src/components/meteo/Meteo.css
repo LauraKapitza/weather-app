@@ -7,6 +7,7 @@
     margin: 0 auto;
 }
 
+#loading,
 #Meteo h1 {
     color: #FFF;
     font-weight: bold; 
@@ -108,6 +109,25 @@
 /* ------METEODAY ELEMENTS------ */
 /* ----------------------------- */
 
+#Meteo h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 20px;
+}
+
+#Meteo h2 span:nth-child(2) {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 36px; 
+}
+
+#Meteo .meteoday-container.fading {
+    animation: meteoDaysShow 1s;
+    animation-iteration-count: 1;
+} 
+
 #Meteo li {
     margin-bottom: 20px;
     display: flex;
@@ -115,17 +135,18 @@
     justify-content: space-between;
     list-style-type: none;
     padding: 20px;
-
-    animation: meteoDayShow 400ms;
-    animation-iteration-count: 1
 }
 
-@keyframes meteoDayShow {
-    from {
+@keyframes meteoDaysShow {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    40%, 60% {
         transform: translateY(20px);
         opacity: 0;
     }
-    to {
+    100% {
         transform: translateY(0px);
         opacity: 1;
     }
@@ -133,6 +154,7 @@
 
 #Meteo li .overview{
     display: flex;
+    align-items: center;
 }
 
 #Meteo li p{
@@ -163,9 +185,7 @@
     color: #5887FF;
 }
 
-#Meteo h2 {
-    font-size: 16px;
-    line-height: 19px;
+#Meteo img {
+    display: block;
+    max-width: 60px;
 }
-
-#Meteo img {max-width: 60px;}

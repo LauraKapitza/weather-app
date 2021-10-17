@@ -1,3 +1,4 @@
+![alt preview image of the weather app](./assets/preview-weather-app.png)
 # Weather Forecast App for Paris
 
 This REACT application forcast the Parisian weather for the next seven days. The forecast can be filteres by min temperature as well as chances of rain.
